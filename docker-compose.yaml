@@ -4,8 +4,8 @@ services:
     image: prom/prometheus
     container_name: prometheus
     volumes:
-      - /Users/nishipy/Projects/Prometheus/2_Beginning/prometheus.yaml:/etc/prometheus/prometheus.yml
-      - /Users/nishipy/Projects/Prometheus/2_Beginning/rules.yaml:/etc/prometheus/rules.yaml
+      - /Local/Path/To/prometheus.yaml:/etc/prometheus/prometheus.yml # TODO
+      - /Local/Path/To/rules.yaml:/etc/prometheus/rules.yaml # TODO
     ports:
       - 9090:9090
   node-exporter:
@@ -23,7 +23,7 @@ services:
     ports:
       - 9093:9093
     volumes:
-      - /Users/nishipy/Projects/Prometheus/2_Beginning/alertmanager.yaml:/alertmanager/alertmanager.yml
+      - /Local/Path/To/alertmanager.yaml:/alertmanager/alertmanager.yml
     command:
       - '--config.file=/alertmanager/alertmanager.yml'
     privileged: true

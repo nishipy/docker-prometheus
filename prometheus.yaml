@@ -8,11 +8,14 @@ rule_files:
 alerting:
   alertmanagers:
   - static_configs:
-     - targets: ['[[YOUR PRIVATE IP]]:9093'] # TODO
+     - targets: ['[[YOUR PRIVATE IP]]:9093'] #TODO
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
   - job_name: 'node'
     static_configs:
-      - targets: ['[[YOUR PRIVATE IP]]:9100'] # TODO
+      - targets: ['[[YOUR PRIVATE IP]]:9100'] #TODO
+  - job_name: 'web'
+    static_configs:
+      - targets: ['[[YOUR PRIVATE IP]]:8000'] #TODO
