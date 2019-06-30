@@ -3,7 +3,7 @@ route:
 receivers:
 - name: 'containers_notification'
   slack_configs:
-    - api_url: '[[YOUR SLACK WEB HOOK]]' #TODO
+    - api_url: '[[YOUR SLACK WEBHOOK]]' #TODO
       channel: '#general'
       text: "{{ .CommonAnnotations.summary }}"
       send_resolved: true

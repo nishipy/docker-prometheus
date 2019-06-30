@@ -3,6 +3,6 @@ groups:
    rules:
    - alert: InstanceDown
      expr: up == 0
-     for: 10s
+     for: 20s
      annotations:
-        summary: 'up == 0'
+        summary: 'Instance is Down!'
