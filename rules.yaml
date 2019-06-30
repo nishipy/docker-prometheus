@@ -5,4 +5,4 @@ groups:
      expr: up == 0
      for: 20s
      annotations:
-        summary: 'Instance is Down!'
+        summary: 'up == 0'
